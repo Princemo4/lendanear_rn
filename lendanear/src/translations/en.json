@@ -1,0 +1,14 @@
+{
+    "Email": "Email",
+    "Password": "Password",
+    "Name": "Name",
+    "LOGIN": "LOGIN",
+    "Create Account": "Create Account",
+    "Need Help?": "Need Help?",
+    "Continue": "Continue",
+    "TOS": "Terms & Conditions",
+    "MsgReqEmail": "Email is Required",
+    "MsgReqPwd": "Password is Required",
+    "MsgInvalidEmail": "Please enter valid email",
+    "MsgPwdLess6": "Password should be atleast 6 characters"
+}
