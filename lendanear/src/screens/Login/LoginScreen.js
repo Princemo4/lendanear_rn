@@ -53,8 +53,6 @@ export default class LoginScreen extends Component {
         </View>
         <KeyboardAvoidingView style={[
           AppStyles.styleSet.screenContainer, 
-          AppStyles.styleSet.alignItemCenter,
-          AppStyles.styleSet.justifyCenter,
           styles.container,
         ]}>
           <View>

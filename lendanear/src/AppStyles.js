@@ -72,7 +72,8 @@ const styleSet = {
   bkgImage: {
     width: '100%',
     height: '100%',
-    resizeMode: 'stretch'
+    resizeMode: 'stretch',
+    opacity: 0.8,
   },
   flex1: {
     flex: 1,

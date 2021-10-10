@@ -4,11 +4,13 @@ import AppStyles from '../../AppStyles';
 export default StyleSheet.create({
   container: {
     marginLeft: 21,
-    marginRight: 21
+    marginRight: 21,
+    justifyContent: 'center',
   },
   inputForm: {
     marginLeft: 28,
-    marginRight: 21
+    marginRight: 21,
+    marginBottom: 80,
   },
   marginVerticalInputs: {
     marginTop: 27
@@ -45,7 +47,7 @@ export default StyleSheet.create({
     marginLeft: 21,
     marginRight: 21
   },
-  v2MColumn: {
+  v2Column: {
     marginBottom: 7,
     marginLeft: 100,
     marginRight: 100,

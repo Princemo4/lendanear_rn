@@ -7,11 +7,17 @@ export default StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
   },
   inputForm: {
     marginLeft: 28,
-    marginRight: 21
+    marginRight: 21,
+    paddingTop: 40,
+  },
+  icon: {
+    color: "rgba(255,255,255,1)",
+    fontSize: 24,
+    marginLeft: 20,
+    alignSelf: "center"
   },
   marginVerticalInputs: {
     marginTop: 27
