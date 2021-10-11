@@ -22,6 +22,7 @@ export default StyleSheet.create({
   iconMicro: {
     color: "rgba(170,9,9,1)",
     fontSize: 33,
+    marginLeft: 16,
     opacity: 0.54,
   },
   v2M: {
@@ -32,7 +33,7 @@ export default StyleSheet.create({
     marginBottom: 8,
     alignSelf: "center"
   },
-  rect7: {
+  logoUnderline: {
     height: 5,
     backgroundColor: "black",
     width: 40,

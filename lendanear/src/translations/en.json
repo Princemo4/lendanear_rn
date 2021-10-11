@@ -11,5 +11,16 @@
     "MsgReqEmail": "Email is Required",
     "MsgReqPwd": "Password is Required",
     "MsgInvalidEmail": "Please enter valid email",
-    "MsgPwdLess6": "Password should be atleast 6 characters"
+    "MsgPwdLess6": "Password should be atleast 6 characters",
+    "SETTINGS": "SETTINGS",
+    "Account Setting": "Account Setting",
+    "Edit Profile": "Edit Profile",
+    "Change Connections": "Change Connections",
+    "Edit provide settings": "Edit provide settings",
+    "Notifications": "Notifications",
+    "MSG_JOINNING": "Joining session\n hang on...",
+    "Voice Session Active": "Voice Session Active",
+    "Active Participants": "Active Participants",
+    "Leave Session": "Leave Session",
+    "Mute": "Mute"
 }

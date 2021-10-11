@@ -10,7 +10,9 @@ const colorSet = {
 }
 
 const imageSet = {
+  imgUserTemp: require('../assets/images/img_user_temp.jpg'),
   bkgMainGradient: require('../assets/images/img_bkg_main_gradient.png'),
+  bkgSessionDialog: require('../assets/images/img_bkg_session_dialog.png'),
 }
 
 const iconSet = {

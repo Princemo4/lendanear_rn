@@ -41,7 +41,7 @@ export default StyleSheet.create({
     marginBottom: 8,
     alignSelf: "center"
   },
-  rect7: {
+  logoUnderline: {
     height: 8,
     backgroundColor: "#25cdec",
     marginLeft: 21,

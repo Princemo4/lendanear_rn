@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, Keyboard, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-import { LoadingIndicator, TextInput, Button, VentMode } from '../../components'
+import { View, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import AppStyles from '../../AppStyles';
 import styles from './Styles';
@@ -21,12 +20,13 @@ export default class SelectModeScreen extends Component {
           <View style={styles.headerContainer}>
             <View style={styles.v2Column}>
               <Text style={styles.v2M}>V2M</Text>
-              <View style={styles.rect7}/>
+              <View style={styles.logoUnderline}/>
             </View>
           </View>
           <View style={[AppStyles.styleSet.flex1, AppStyles.styleSet.alignItemCenter, AppStyles.styleSet.justifyCenter]}>
             <View style={[AppStyles.styleSet.alignItemCenter, AppStyles.styleSet.justifyCenter, {paddingBottom: 150}]}>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={()=> this.onTalkSomeone()}>
                 <View style={styles.talkContainer}>
                   <Text style={styles.talkToSomeone}>TALK TO SOMEONE</Text>
                   <FontAwesomeIcon
@@ -34,7 +34,8 @@ export default class SelectModeScreen extends Component {
                     style={styles.iconMicro} />
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={()=> this.onListenSomeone()}>
                 <View style={styles.listenContainer}>
                   <Text style={styles.listenToSomeone}>LISTEN</Text>
                   <FontAwesomeIcon
@@ -48,5 +49,13 @@ export default class SelectModeScreen extends Component {
         </KeyboardAvoidingView>
       </View>
     )
+  }
+
+  onTalkSomeone = () => {
+    this.props.navigation.navigate('Setting');
+  }
+
+  onListenSomeone = () => {
+    this.props.navigation.navigate('Session');
   }
 }

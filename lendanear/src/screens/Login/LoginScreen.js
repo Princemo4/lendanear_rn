@@ -56,9 +56,9 @@ export default class LoginScreen extends Component {
           styles.container,
         ]}>
           <View>
-            <View style={styles.v2MColumn}>
+            <View style={styles.v2Column}>
               <Text style={styles.v2M}>V2M</Text>
-              <View style={styles.rect7}/>
+              <View style={styles.logoUnderline}/>
             </View>
             <View style={styles.inputForm}>
               <TextInput
@@ -135,10 +135,11 @@ export default class LoginScreen extends Component {
   }
 
   onLoginPressed = () => {
-    if (!this.checkInputValidation()) {
-      return;
-    }
+    // if (!this.checkInputValidation()) {
+    //   return;
+    // }
 
-    this.setState({loading: true}, this.login);
+    // this.setState({loading: true}, this.login);
+    this.props.navigation.navigate('Session');
   }
 }
