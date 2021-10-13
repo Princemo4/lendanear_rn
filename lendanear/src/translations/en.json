@@ -24,5 +24,7 @@
     "Leave Session": "Leave Session",
     "Mute": "Mute",
     "TALK TO SOMEONE": "TALK TO SOMEONE",
-    "LISTEN": "LISTEN"
+    "LISTEN": "LISTEN",
+    "ErrorMsgUnknown": "Unkown Error",
+    "InvalidRequest": "Invalid Request"
 }

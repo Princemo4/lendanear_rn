@@ -18,6 +18,7 @@ const KEYS = {
 const CONFIGS = {
   AGORA_APP_ID: '182ef16c71a246dab8b32a8e0f4ed0cb',
   AGORA_TOKEN: '006182ef16c71a246dab8b32a8e0f4ed0cbIAAMeuR9wKoA6Na5uRo45eM/SkvUPUxRYUCzNgYKZSLwg6HYMoUAAAAAEABumw/w86NmYQEAAQDyo2Zh',
+  Heroku_URL: 'https://lendanear.herokuapp.com'
 };
 
 const Constants = {

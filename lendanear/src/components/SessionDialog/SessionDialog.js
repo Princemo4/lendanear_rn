@@ -42,14 +42,20 @@ export default function SessionDialog(props) {
           </View>
           <View style={[AppStyles.styleSet.fullWidth, AppStyles.styleSet.alignItemCenter]}>
             <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.sessionButton}>
+              <TouchableOpacity 
+                style={styles.sessionButton}
+                onPress={()=> props.onPressMute?.()}
+              >
                 <MaterialCommunityIconsIcon
                   name="microphone-off"
                   style={styles.iconMute}
                 />
                 <Text style={styles.leaveSession}>{ IMLocalized('Mute') }</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.sessionButton}>
+              <TouchableOpacity 
+                style={styles.sessionButton}
+                onPress={()=> props.onPressLeave?.()}
+              >
                 <FeatherIcon name="x-circle" style={styles.iconLeave}/>
                 <Text style={styles.leaveSession}>{ IMLocalized('Leave Session') }</Text>
               </TouchableOpacity>

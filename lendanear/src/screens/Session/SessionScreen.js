@@ -15,18 +15,21 @@ import AppStyles from '../../AppStyles';
 import Constants from '../../Constants';
 import styles from './Styles';
 import RtcEngine from 'react-native-agora';
+import {
+  GetAgoraToken
+} from '../../core/network/RestAPI';
 
 export default class SessionScreen extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      screenState: 0, // 0: Joining, 1: Sessions
       permissionsGranted: Platform.OS === 'ios',
       peerIds: [],
-      uid: '',
+      uid: 100,
+      isMute: false,
       token: null,
-      channelName: 'TestChannel'
+      channelName: 'TestChannel',
     };
 
     this.askPermission()
@@ -34,9 +37,7 @@ export default class SessionScreen extends Component {
 
   componentDidMount() {
     this.initAgora()
-    // setTimeout(() => {
-    //     this.setState({screenState: 1});
-    // }, 3000);
+    this.getTokenAndUid()
   }
 
   askPermission = async () => {
@@ -103,23 +104,47 @@ export default class SessionScreen extends Component {
         joinSucceed: true,
       });
     });
-
-    this.startCall();
   };
+
+  /**
+   * @name getTokenAndUid
+   * @description Function to get agora token and uid for given channel name
+   */
+  getTokenAndUid = async() => {
+    
+    let result = await GetAgoraToken(this.state.channelName);
+    console.log('api result = ', result);
+    if (result.success) {
+      let apiData = result.data;
+      this.setState({
+        token: apiData.token,
+        // uid: apiData.uid,
+      }, this.startCall);
+    }
+  }
 
   /**
    * @name startCall
    * @description Function to start the call
    */
   startCall = async () => {
-    const { AGORA_TOKEN } = Constants.Configs;
-    console.log('AGORA_TOKEN = ', AGORA_TOKEN);
-    // Join Channel using null token and channel name
+    /* With Temp Token */
+    // const { AGORA_TOKEN } = Constants.Configs;
+    // console.log('AGORA_TOKEN = ', AGORA_TOKEN);
+    // // Join Channel using null token and channel name
+    // 
+    // await this._engine?.joinChannel(
+    //   AGORA_TOKEN,
+    //   this.state.channelName,
+    //   null,
+    //   0
+    // );
+    console.log('Join Channel With ', this.state.token, this.state.channelName, this.state.uid);
     await this._engine?.joinChannel(
-      AGORA_TOKEN,
+      this.state.token,
       this.state.channelName,
       null,
-      0
+      this.state.uid
     );
   };
 
@@ -129,8 +154,12 @@ export default class SessionScreen extends Component {
    */
    endCall = async () => {
     await this._engine?.leaveChannel();
-    this.setState({ peerIds: [], joinSucceed: false });
+    this.setState({ peerIds: [], joinSucceed: false }, this.goBack);
   };
+
+  goBack = () => {
+    this.props.navigation.navigate('Login')
+  }
 
   render() {
     return (
@@ -152,16 +181,35 @@ export default class SessionScreen extends Component {
           <View style={AppStyles.styleSet.flex1}>
             <View style={styles.headerDivider} />
             <View style={[AppStyles.styleSet.flex1, AppStyles.styleSet.alignItemCenter, AppStyles.styleSet.justifyCenter]}>
-              {(this.state.screenState === 0) && (
+              {(!this.state.joinSucceed) && (
                 <JoinLoader/>
               )}
-              {(this.state.screenState === 1) && (
-                <SessionDialog/>
+              {(this.state.joinSucceed) && (
+                <SessionDialog
+                  onPressMute={()=> this.onPressSessionMute()}
+                  onPressLeave={()=> this.onPressSessionLeave()}/>
               )}
             </View>
           </View>
         </KeyboardAvoidingView>
       </View>
     )
+  }
+
+  onPressSessionMute = () => {
+    this.state({isMute: !this.state.isMute}, this.updateAudioState);
+  }
+
+  updateAudioState = () => {
+    if (this.state.isMute) {
+      this._engine.disableAudio();
+    } else {
+      this._engine.enableAudio();
+    }
+  }
+
+  onPressSessionLeave = () => {
+    console.log('onPressSessionLeave')
+    this.endCall();
   }
 }
