@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import AppStyles from '../../AppStyles';
+import { IMLocalized } from '../../core/localization/IMLocalization';
 import styles from './Styles';
 
 export default class SelectModeScreen extends Component {
@@ -11,6 +12,7 @@ export default class SelectModeScreen extends Component {
     this.state = {
     };
   }
+  
   render() {
     return (
       <View style={AppStyles.styleSet.flex1}>
@@ -28,7 +30,7 @@ export default class SelectModeScreen extends Component {
               <TouchableOpacity
                 onPress={()=> this.onTalkSomeone()}>
                 <View style={styles.talkContainer}>
-                  <Text style={styles.talkToSomeone}>TALK TO SOMEONE</Text>
+                  <Text style={styles.talkToSomeone}>{ IMLocalized('TALK TO SOMEONE') }</Text>
                   <FontAwesomeIcon
                     name="microphone"
                     style={styles.iconMicro} />
@@ -37,7 +39,7 @@ export default class SelectModeScreen extends Component {
               <TouchableOpacity
                 onPress={()=> this.onListenSomeone()}>
                 <View style={styles.listenContainer}>
-                  <Text style={styles.listenToSomeone}>LISTEN</Text>
+                  <Text style={styles.listenToSomeone}>{ IMLocalized('LISTEN') }</Text>
                   <FontAwesomeIcon
                     name="assistive-listening-systems"
                     style={styles.iconListening}
