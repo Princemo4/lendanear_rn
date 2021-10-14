@@ -16,28 +16,39 @@ import Constants from '../../Constants';
 import styles from './Styles';
 import RtcEngine from 'react-native-agora';
 import {
-  GetAgoraToken
+  GetAgoraToken,
+  GetUserFromAgoraId,
 } from '../../core/network/RestAPI';
 
 export default class SessionScreen extends Component {
   constructor(props) {
     super(props);
 
+    const userData = props.navigation.getParam('user');
+    console.log('navigationParam = ', userData);
+    
     this.state = {
       permissionsGranted: Platform.OS === 'ios',
       peerIds: [],
-      uid: 100,
+      uid: userData.agoraUid,
       isMute: false,
       token: null,
       channelName: 'TestChannel',
+      users: [userData],
+      timer: 0,
     };
 
+    this.interval = null;
     this.askPermission()
   }
 
   componentDidMount() {
     this.initAgora()
-    this.getTokenAndUid()
+    this.getAgoraToken()
+  }
+
+  componentWillUnmount() {
+    this.stopTimeCount();
   }
 
   askPermission = async () => {
@@ -62,7 +73,6 @@ export default class SessionScreen extends Component {
 
   initAgora = async () => {
     const { AGORA_APP_ID } = Constants.Configs;
-    console.log('AGORA_APP_ID = ', AGORA_APP_ID);
     this._engine = await RtcEngine.create(AGORA_APP_ID);
     await this._engine.disableVideo();
 
@@ -84,6 +94,8 @@ export default class SessionScreen extends Component {
           // Add peer ID to state array
           peerIds: [...peerIds, uid],
         });
+
+        this.appendPeerDetails(uid);
       }
     });
 
@@ -102,23 +114,34 @@ export default class SessionScreen extends Component {
       // Set state variable to true
       this.setState({
         joinSucceed: true,
-      });
+      }, this.startTimeCount);
     });
   };
+
+  appendPeerDetails = async(agoraUid) => {
+    console.log('getUserDetails ', agoraUid)
+    this.setState({loading: true});
+    let result = await GetUserFromAgoraId(agoraUid);
+    console.log('result = ', result);
+    this.setState({loading: false});
+    if (result.success) {
+      this.setState({
+        // Add peer ID to state array
+        users: [...users, result.data],
+      });
+    }
+  }
 
   /**
    * @name getTokenAndUid
    * @description Function to get agora token and uid for given channel name
    */
-  getTokenAndUid = async() => {
-    
+  getAgoraToken = async() => {
     let result = await GetAgoraToken(this.state.channelName);
-    console.log('api result = ', result);
-    if (result.success) {
-      let apiData = result.data;
+    console.log('getAgoraToken result = ', result);
+    if (result.success && result.data)  {
       this.setState({
-        token: apiData.token,
-        // uid: apiData.uid,
+        token: result.data,
       }, this.startCall);
     }
   }
@@ -128,17 +151,6 @@ export default class SessionScreen extends Component {
    * @description Function to start the call
    */
   startCall = async () => {
-    /* With Temp Token */
-    // const { AGORA_TOKEN } = Constants.Configs;
-    // console.log('AGORA_TOKEN = ', AGORA_TOKEN);
-    // // Join Channel using null token and channel name
-    // 
-    // await this._engine?.joinChannel(
-    //   AGORA_TOKEN,
-    //   this.state.channelName,
-    //   null,
-    //   0
-    // );
     console.log('Join Channel With ', this.state.token, this.state.channelName, this.state.uid);
     await this._engine?.joinChannel(
       this.state.token,
@@ -156,6 +168,19 @@ export default class SessionScreen extends Component {
     await this._engine?.leaveChannel();
     this.setState({ peerIds: [], joinSucceed: false }, this.goBack);
   };
+
+  startTimeCount = () => {
+    this.interval = setInterval(
+      () => this.setState((prevState)=> ({ timer: prevState.timer + 1 })),
+      1000
+    );
+  }
+
+  stopTimeCount = () => {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
 
   goBack = () => {
     this.props.navigation.navigate('Login')
@@ -186,6 +211,8 @@ export default class SessionScreen extends Component {
               )}
               {(this.state.joinSucceed) && (
                 <SessionDialog
+                  data={this.state.users}
+                  seconds={this.state.timer}
                   onPressMute={()=> this.onPressSessionMute()}
                   onPressLeave={()=> this.onPressSessionLeave()}/>
               )}

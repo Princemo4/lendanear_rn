@@ -57,6 +57,37 @@ export async function GetAgoraToken(channelName) {
       });
     
     if (response.data) {
+      return { success: true, data: response.data.token };
+    } else {
+      return { success: false, err: IMLocalized('InvalidRequest') };
+    }
+
+  } catch (e) {
+    return { success: false, err: e.message, code: e.code ?? '' };
+  }
+}
+
+export async function GetUserFromAgoraId(agoraUid) {
+  try {
+    const response = await axios
+      .get(
+        Constants.Configs.Heroku_URL + '/users/agoraUid/' + agoraUid,
+        {},
+        { headers: getHttpHeader('application/json') },
+      )
+      .catch(err => {
+    
+        if (err.response?.data?.error) {
+          throw {
+            code: err.response?.data?.error?.code ?? '',
+            message: err.response?.data?.error?.description ?? '',
+          };
+        }
+    
+        throw new Error(IMLocalized('ErrorMsgUnknown'));
+      });
+    
+    if (response.data) {
       return { success: true, data: response.data };
     } else {
       return { success: false, err: IMLocalized('InvalidRequest') };

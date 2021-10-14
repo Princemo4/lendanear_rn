@@ -19,3 +19,14 @@ export function showAlertDialog(message, title = 'Error') {
     { cancelable: true },
   );
 }
+
+/**
+ * convert int to string with leading zero
+ */
+ export function zeroPad(num, size) {
+  var s = num + '';
+  while (s.length < size) {
+    s = '0' + s;
+  }
+  return s;
+}

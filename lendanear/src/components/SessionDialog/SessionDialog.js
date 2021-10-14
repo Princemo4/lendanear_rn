@@ -6,8 +6,25 @@ import styles from './Styles';
 import SessionUserItem from '../SessionUserItem/SessionUserItem';
 import FeatherIcon from "react-native-vector-icons/Feather";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import { zeroPad } from '../../core/helpers/statics';
 
 export default function SessionDialog(props) {
+  const users = props.data
+  var userListComps = [];
+  for(let user of users) {
+    console.log('user iterator = ', user);
+    userListComps.push(
+      <SessionUserItem
+        key={user._id}
+        userName={user.firstName ?? '' + ' ' + user.lastName ?? ''}
+        userState={'speaking'}/>
+    );
+  }
+
+  const seconds = props.seconds ?? 0;
+  const nMin = Math.floor(seconds / 60);
+  const nSec = seconds % 60;
+  const strTime = zeroPad(nMin, 2) + ':' + zeroPad(nSec, 2);
   return (
       <View style={styles.container}>
         <View style={AppStyles.styleSet.bkgImageContainer}>
@@ -20,7 +37,7 @@ export default function SessionDialog(props) {
             {IMLocalized('Voice Session Active')}
           </Text>
           <Text style={styles.voiceSessionTime}>
-            {'00:00'}
+            {strTime}
           </Text>
           <View style={styles.userList}>
             <View style={styles.listHeader}>
@@ -29,15 +46,7 @@ export default function SessionDialog(props) {
               </Text>
             </View>
             <ScrollView contentContainerStyle={styles.userListScroll}>
-              <SessionUserItem
-                userName={'User1'}
-                userState={'speaking'}/>
-              <SessionUserItem
-                userName={'User2'}
-                userState={'listening'}/>
-              <SessionUserItem
-                userName={'User3'}
-                userState={'listening'}/>
+              { userListComps }
             </ScrollView>
           </View>
           <View style={[AppStyles.styleSet.fullWidth, AppStyles.styleSet.alignItemCenter]}>

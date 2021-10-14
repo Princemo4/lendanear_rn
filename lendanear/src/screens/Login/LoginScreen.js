@@ -6,11 +6,13 @@ import { showAlertDialog } from '../../core/helpers/statics';
 import Constants from '../../Constants';
 import AppStyles from '../../AppStyles';
 import styles from './Styles';
+import { GetUserFromAgoraId } from '../../core/network/RestAPI';
 
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
 
+    this.userData = null;
     this.state = {
       keyboardShown: false,
       loading: false,
@@ -22,6 +24,27 @@ export default class LoginScreen extends Component {
   componentWillUnmount() {
     this.keyboardShowListener?.remove();
     this.keyboardHideListener?.remove();
+  }
+
+  getUserDetails = async(agoraUid) => {
+    console.log('getUserDetails ', agoraUid)
+    this.setState({loading: true});
+    let result = await GetUserFromAgoraId(agoraUid);
+    console.log('result = ', result);
+    
+    if (result.success) {
+      this.userData = result.data;
+    }
+
+    this.setState({loading: false}, this.moveToSession);
+  }
+
+  moveToSession = () => {
+    if (this.userData) {
+      this.props.navigation.navigate('Session', {
+        user: this.userData
+      });
+    }
   }
 
   componentDidMount() {
@@ -139,7 +162,12 @@ export default class LoginScreen extends Component {
     //   return;
     // }
 
-    // this.setState({loading: true}, this.login);
-    this.props.navigation.navigate('Session');
+    // let agoraId = (this.state.email === '1') ? 6 : 17;
+    if (this.state.email === '1') {
+      this.getUserDetails(6);
+    } else {
+      this.getUserDetails(17);
+    }
+    
   }
 }
