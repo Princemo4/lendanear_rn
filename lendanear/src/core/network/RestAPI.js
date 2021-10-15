@@ -97,3 +97,42 @@ export async function GetUserFromAgoraId(agoraUid) {
     return { success: false, err: e.message, code: e.code ?? '' };
   }
 }
+
+export async function CreateAccount(email, pwd, firstName, lastName, screenName) {
+  try {
+    const param = JSON.stringify({
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      screenName: screenName,
+      password: pwd,
+    });
+    
+    const response = await axios
+      .post(
+        Constants.Configs.Heroku_URL + '/users',
+        param,
+        { headers: getHttpHeader('application/json') },
+      )
+      .catch(err => {
+    
+        if (err.response?.data?.error) {
+          throw {
+            code: err.response?.data?.error?.code ?? '',
+            message: err.response?.data?.error?.description ?? '',
+          };
+        }
+    
+        throw new Error(IMLocalized('ErrorMsgUnknown'));
+      });
+    
+    if (response.data) {
+      return { success: true, data: response.data };
+    } else {
+      return { success: false, err: IMLocalized('InvalidRequest') };
+    }
+
+  } catch (e) {
+    return { success: false, err: e.message, code: e.code ?? '' };
+  }
+}

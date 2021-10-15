@@ -41,7 +41,7 @@ export default class LoginScreen extends Component {
 
   moveToSession = () => {
     if (this.userData) {
-      this.props.navigation.navigate('Session', {
+      this.props.navigation.navigate('SelectMode', {
         user: this.userData
       });
     }

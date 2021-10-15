@@ -25,6 +25,7 @@ export default class SessionScreen extends Component {
     super(props);
 
     const userData = props.navigation.getParam('user');
+    const mode = props.navigation.getParam('mode');
     console.log('navigationParam = ', userData);
     
     this.state = {
@@ -33,7 +34,7 @@ export default class SessionScreen extends Component {
       uid: userData.agoraUid,
       isMute: false,
       token: null,
-      channelName: 'TestChannel',
+      channelName: userData._id,
       users: [userData],
       timer: 0,
     };
@@ -89,13 +90,15 @@ export default class SessionScreen extends Component {
       // Get current peer IDs
       const { peerIds } = this.state;
       // If new user
-      if (peerIds.indexOf(uid) === -1) {
-        this.setState({
-          // Add peer ID to state array
-          peerIds: [...peerIds, uid],
-        });
-
-        this.appendPeerDetails(uid);
+      if (uid != this.state.uid) {
+        if (peerIds.indexOf(uid) === -1) {
+          this.setState({
+            // Add peer ID to state array
+            peerIds: [...peerIds, uid],
+          });
+  
+          this.appendPeerDetails(uid);
+        }
       }
     });
 
@@ -123,12 +126,15 @@ export default class SessionScreen extends Component {
     this.setState({loading: true});
     let result = await GetUserFromAgoraId(agoraUid);
     console.log('result = ', result);
-    this.setState({loading: false});
+
     if (result.success) {
       this.setState({
+        loading: false,
         // Add peer ID to state array
         users: [...users, result.data],
       });
+    } else {
+      this.setState({loading: false});
     }
   }
 

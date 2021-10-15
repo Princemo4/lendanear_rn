@@ -10,6 +10,8 @@
     "TOS": "Terms & Conditions",
     "MsgReqEmail": "Email is Required",
     "MsgReqPwd": "Password is Required",
+    "MsgReqScreenName": "Screen Name is Required",
+    "MsgReqCode": "Code is Required",
     "MsgInvalidEmail": "Please enter valid email",
     "MsgPwdLess6": "Password should be atleast 6 characters",
     "SETTINGS": "SETTINGS",

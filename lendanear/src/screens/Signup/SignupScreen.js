@@ -21,11 +21,13 @@ import EntypoIcon from "react-native-vector-icons/Entypo";
 import Constants from '../../Constants';
 import AppStyles from '../../AppStyles';
 import styles from './Styles';
+import { CreateAccount } from '../../core/network/RestAPI';
 
 export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
 
+    this.userData = null;
     this.state = {
       stepIndex: 0,
       keyboardShown: false,
@@ -33,6 +35,8 @@ export default class LoginScreen extends Component {
       email: '',
       name: '',
       pwd: '',
+      screenName: '',
+      code: '',
     };
   }
   componentWillUnmount() {
@@ -131,9 +135,9 @@ export default class LoginScreen extends Component {
                     }
                     secureEntry={true}
                     onChangeText={text => {
-                      this.setState({ pwd: text });
+                      this.setState({ code: text });
                     }}
-                    value={this.state.pwd}
+                    value={this.state.code}
                   />
                )}
                { (this.state.stepIndex == 2) && (
@@ -148,9 +152,9 @@ export default class LoginScreen extends Component {
                     }
                     secureEntry={true}
                     onChangeText={text => {
-                      this.setState({ pwd: text });
+                      this.setState({ screenName: text });
                     }}
-                    value={this.state.pwd}
+                    value={this.state.screenName}
                   />
                )}
               <Button
@@ -195,36 +199,86 @@ export default class LoginScreen extends Component {
     }
   };
 
-  checkInputValidation = () => {
-    if (this.state.email === '') {
-      showAlertDialog(IMLocalized('MsgReqEmail'));
-      return false;
-    }
-
-    if (this.state.pwd === '') {
-      showAlertDialog(IMLocalized('MsgReqPwd'));
-      return false;
-    }
-
-    if (!Constants.regEx.email.test(this.state.email)) {
-      showAlertDialog(IMLocalized('MsgInvalidEmail'));
-      return false;
+  checkInputValidation = (stepIndex) => {
+    if (stepIndex == 0) {
+      if (this.state.email === '') {
+        showAlertDialog(IMLocalized('MsgReqEmail'));
+        return false;
+      }
+  
+      if (this.state.pwd === '') {
+        showAlertDialog(IMLocalized('MsgReqPwd'));
+        return false;
+      }
+  
+      if (!Constants.regEx.email.test(this.state.email)) {
+        showAlertDialog(IMLocalized('MsgInvalidEmail'));
+        return false;
+      }
+      
+      if (this.state.pwd.length < 6) {
+        showAlertDialog(IMLocalized('MsgPwdLess6'));
+        return false;
+      }
+  
+      return true;
     }
     
-    if (this.state.pwd.length < 6) {
-      showAlertDialog(IMLocalized('MsgPwdLess6'));
-      return false;
+    if (stepIndex == 1) {
+      if (this.state.code === '') {
+        showAlertDialog(IMLocalized('MsgReqCode'));
+        return false;
+      }
+
+      return true;
     }
 
-    return true;
+    if (stepIndex == 2) {
+      if (this.state.screenName === '') {
+        showAlertDialog(IMLocalized('MsgReqScreenName'));
+        return false;
+      }
+
+      return true;
+    }
   }
 
   onContinuePressed = () => {
-    if (this.state.stepIndex == 2) {
-      this.props.navigation.navigate('SelectMode');
+    if (!this.checkInputValidation(this.state.stepIndex)) {
       return;
     }
-    this.setState({stepIndex: this.state.stepIndex + 1})
+
+    if (this.state.stepIndex == 2) {
+      this.createAccount();
+    } else {
+      this.setState({stepIndex: this.state.stepIndex + 1}) 
+    }
+  }
+
+  createAccount = async() => {
+    this.setState({loading: true});
+    const words = this.state.name.split(' ');
+    const fName = words.length > 0 ? words[0] : '';
+    const lName = words.length > 1 ? words[1] : '';
+    let result = await CreateAccount(this.state.email, this.state.pwd, fName, lName, this.state.screenName);
+    if (result.success) {
+      console.log('signUp result =', result.data);
+      this.userData = result.data;
+      this.setState({loading: false}, this.showNextScreen);
+    }
+    else {
+      console.log('signUp result error =', result.err);
+      this.setState({loading: false});
+      showAlertDialog(result.err?.getMessage() ?? IMLocalized('ErrorMsgUnknown'));
+    }
+  }
+
+  showNextScreen = () => {
+    if (this.userData) {
+      this.props.navigation.navigate('SelectMode', {
+        user: this.userData
+      });
+    }
   }
 
   onBackPressed = () => {

@@ -8,6 +8,7 @@ import styles from './Styles';
 export default class SelectModeScreen extends Component {
   constructor(props) {
     super(props);
+    const userData = props.navigation.getParam('user');
 
     this.state = {
     };
@@ -54,10 +55,16 @@ export default class SelectModeScreen extends Component {
   }
 
   onTalkSomeone = () => {
-    this.props.navigation.navigate('Setting');
+    this.props.navigation.navigate('Session', {
+      user: this.userData,
+      mode: 'talk'
+    });
   }
 
   onListenSomeone = () => {
-    this.props.navigation.navigate('Session');
+    this.props.navigation.navigate('SelectMode', {
+      user: this.userData,
+      mode: 'listen'
+    });
   }
 }
