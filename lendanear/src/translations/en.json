@@ -28,5 +28,11 @@
     "TALK TO SOMEONE": "TALK TO SOMEONE",
     "LISTEN": "LISTEN",
     "ErrorMsgUnknown": "Unkown Error",
-    "InvalidRequest": "Invalid Request"
+    "InvalidRequest": "Invalid Request",
+    "Your Info": "Your Info",
+    "Verify Email": "Verify Email",
+    "Hide your Identity": "Hide your Identity",
+    "We sent you an email with your verification code": "We sent you an email with your verification code",
+    "The community will only know you by this name": "The community will only know you by this name",
+    "STEP": "STEP"
 }

@@ -5,7 +5,10 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 
 export default function TextInputComp(props) {  
   const iconView = props.iconView;
-
+  const secureEntry = (props.secureTextEntry ?? false);
+  const placeholderColor = props.placeholderTextColor ?? 'rgba(255,255,255,0.5)'
+  const inputStyle = {...(props.inputStyle ?? {}), ...styles.textInput};
+  const newProps = secureEntry ? {...props, secureTextEntry: secureEntry, style: inputStyle, placeholderTextColor: placeholderColor} : {...props, style: inputStyle, placeholderTextColor: placeholderColor};
   return (
     <View style={[styles.container, props.style ?? {}]}>
       { (iconView == undefined) && (
@@ -17,12 +20,8 @@ export default function TextInputComp(props) {
       { (iconView != undefined) && (
         iconView
       )}
-      <TextInput
-        placeholder={props.placeholder ?? ''}
-        placeholderTextColor={props.textColor ?? 'rgba(255,255,255,0.5)'}
-        secureTextEntry={props.secureEntry ?? false}
-        style={styles.textInput}
-      ></TextInput>
+      <TextInput {...newProps}/>
+      
     </View>
   );
 }

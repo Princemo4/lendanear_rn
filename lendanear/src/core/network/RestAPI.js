@@ -32,107 +32,87 @@ function getHttpHeader(contentType) {
   return httpHeader;
 }
 
-export async function GetAgoraToken(channelName) {
-  try {
-    const param = JSON.stringify({
-      channel: channelName,
-    });
-    
-    const response = await axios
-      .post(
-        Constants.Configs.Heroku_URL + '/rtctoken',
-        param,
-        { headers: getHttpHeader('application/json') },
-      )
-      .catch(err => {
-    
-        if (err.response?.data?.error) {
-          throw {
-            code: err.response?.data?.error?.code ?? '',
-            message: err.response?.data?.error?.description ?? '',
-          };
-        }
-    
-        throw new Error(IMLocalized('ErrorMsgUnknown'));
-      });
-    
-    if (response.data) {
-      return { success: true, data: response.data.token };
-    } else {
-      return { success: false, err: IMLocalized('InvalidRequest') };
-    }
+requestCatchHandler = (err) => {
+  if (err.response?.data?.error) {
+    throw {
+      code: err.response?.data?.error?.code ?? '',
+      message: err.response?.data?.error?.description ?? '',
+    };
+  }
 
-  } catch (e) {
-    return { success: false, err: e.message, code: e.code ?? '' };
+  throw new Error(IMLocalized('ErrorMsgUnknown'));
+}
+
+apiResultResponse = (response) => {
+  if (response.data) {
+    return { success: true, data: response.data };
+  } else {
+    return { success: false, err: IMLocalized('InvalidRequest') };
   }
 }
 
-export async function GetUserFromAgoraId(agoraUid) {
+apiErrorResponse = (e) => {
+  return { success: false, err: e.message, code: e.code ?? '' };
+}
+
+async function getRequest(url, param = {}, header = { headers: getHttpHeader('application/json') }) {
+  console.log('GetRequeset url=', url, param, header);
   try {
     const response = await axios
       .get(
-        Constants.Configs.Heroku_URL + '/users/agoraUid/' + agoraUid,
-        {},
-        { headers: getHttpHeader('application/json') },
+        url,
+        param,
+        header,
       )
       .catch(err => {
-    
-        if (err.response?.data?.error) {
-          throw {
-            code: err.response?.data?.error?.code ?? '',
-            message: err.response?.data?.error?.description ?? '',
-          };
-        }
-    
-        throw new Error(IMLocalized('ErrorMsgUnknown'));
+        requestCatchHandler(err);
       });
     
-    if (response.data) {
-      return { success: true, data: response.data };
-    } else {
-      return { success: false, err: IMLocalized('InvalidRequest') };
-    }
-
+    return apiResultResponse(response);
   } catch (e) {
-    return { success: false, err: e.message, code: e.code ?? '' };
+    return apiErrorResponse(e);
   }
 }
 
-export async function CreateAccount(email, pwd, firstName, lastName, screenName) {
+async function postRequest(url, param = {}, header = { headers: getHttpHeader('application/json') }) {
+  console.log('PostRequeset url=', url, param, header);
   try {
-    const param = JSON.stringify({
-      email: email,
-      firstName: firstName,
-      lastName: lastName,
-      screenName: screenName,
-      password: pwd,
-    });
-    
     const response = await axios
       .post(
-        Constants.Configs.Heroku_URL + '/users',
+        url,
         param,
-        { headers: getHttpHeader('application/json') },
+        header,
       )
       .catch(err => {
-    
-        if (err.response?.data?.error) {
-          throw {
-            code: err.response?.data?.error?.code ?? '',
-            message: err.response?.data?.error?.description ?? '',
-          };
-        }
-    
-        throw new Error(IMLocalized('ErrorMsgUnknown'));
+        requestCatchHandler(err);
       });
     
-    if (response.data) {
-      return { success: true, data: response.data };
-    } else {
-      return { success: false, err: IMLocalized('InvalidRequest') };
-    }
-
+    return apiResultResponse(response);
   } catch (e) {
-    return { success: false, err: e.message, code: e.code ?? '' };
+    return apiErrorResponse(e);
   }
+}
+
+export async function GetAgoraToken(channelName) {
+  const param = JSON.stringify({
+    channel: channelName,
+  });
+
+  return await postRequest(Constants.Configs.Heroku_URL + '/rtctoken', param);
+}
+
+export async function GetUserFromAgoraId(agoraUid) {
+  return await getRequest(Constants.Configs.Heroku_URL + '/users/agoraUid/' + agoraUid);
+}
+
+export async function CreateAccount(email, pwd, firstName, lastName, screenName) {
+  const param = JSON.stringify({
+    email: email,
+    firstName: firstName,
+    lastName: lastName,
+    screenName: screenName,
+    password: pwd,
+  });
+
+  return await postRequest(Constants.Configs.Heroku_URL + '/users', param);
 }

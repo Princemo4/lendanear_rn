@@ -8,7 +8,7 @@ import styles from './Styles';
 export default class SelectModeScreen extends Component {
   constructor(props) {
     super(props);
-    const userData = props.navigation.getParam('user');
+    this.userData = props.navigation.getParam('user');
 
     this.state = {
     };

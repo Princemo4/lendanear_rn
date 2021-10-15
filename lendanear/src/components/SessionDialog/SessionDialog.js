@@ -12,11 +12,10 @@ export default function SessionDialog(props) {
   const users = props.data
   var userListComps = [];
   for(let user of users) {
-    console.log('user iterator = ', user);
     userListComps.push(
       <SessionUserItem
         key={user._id}
-        userName={user.firstName ?? '' + ' ' + user.lastName ?? ''}
+        userName={`${user.firstName ?? ''} ${user.lastName ?? ''}`}
         userState={'speaking'}/>
     );
   }

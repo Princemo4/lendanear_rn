@@ -29,9 +29,8 @@ export default class LoginScreen extends Component {
   getUserDetails = async(agoraUid) => {
     console.log('getUserDetails ', agoraUid)
     this.setState({loading: true});
-    let result = await GetUserFromAgoraId(agoraUid);
-    console.log('result = ', result);
     
+    let result = await GetUserFromAgoraId(agoraUid);    
     if (result.success) {
       this.userData = result.data;
     }
@@ -162,11 +161,11 @@ export default class LoginScreen extends Component {
     //   return;
     // }
 
-    // let agoraId = (this.state.email === '1') ? 6 : 17;
+    let agoraId = (this.state.email === '1') ? 6 : 17;
     if (this.state.email === '1') {
-      this.getUserDetails(6);
+      this.getUserDetails(agoraId);
     } else {
-      this.getUserDetails(17);
+      this.getUserDetails(agoraId);
     }
     
   }
