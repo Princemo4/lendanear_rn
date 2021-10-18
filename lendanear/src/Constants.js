@@ -16,7 +16,7 @@ const KEYS = {
 };
 
 const CONFIGS = {
-  AGORA_APP_ID: 'e2735d96f8f14529bfca4547e8ac0442',
+  AGORA_APP_ID: 'b0128a40c78c4a608d6f52d4645c9133',
   Heroku_URL: 'https://lendanear.herokuapp.com'
 };
 

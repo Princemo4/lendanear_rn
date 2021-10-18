@@ -34,7 +34,10 @@ export default class SessionScreen extends Component {
       uid: userData.agoraUid,
       isMute: false,
       token: null,
+      // fromMo, token: '006b0128a40c78c4a608d6f52d4645c9133IAANZU76zcM+PHaxyD5gYLWpK5v1QqPnFLrSoF/sOY57RaHYMoVCsDk/IgCfEH5VrdNuYQQAAQA9kG1hAgA9kG1hAwA9kG1hBAA9kG1h',
+      //tempToken, token: '006b0128a40c78c4a608d6f52d4645c9133IAACAPEsoSIEoIDRkz/6rIrpU4qYdKJ6OtLt3epxWOfb5aHYMoUAAAAAEAAPz4g6UM5uYQEAAQBQzm5h',//null,
       channelName: userData._id,
+      // channelName: 'TestChannel',
       users: [userData],
       timer: 0,
     };
@@ -45,7 +48,6 @@ export default class SessionScreen extends Component {
 
   componentDidMount() {
     this.initAgora()
-    this.getAgoraToken()
   }
 
   componentWillUnmount() {
@@ -119,6 +121,9 @@ export default class SessionScreen extends Component {
         joinSucceed: true,
       }, this.startTimeCount);
     });
+
+    // this.startCall();
+    this.getAgoraToken();
   };
 
   appendPeerDetails = async(agoraUid) => {
@@ -145,9 +150,9 @@ export default class SessionScreen extends Component {
   getAgoraToken = async() => {
     let result = await GetAgoraToken(this.state.channelName);
     console.log('getAgoraToken result = ', result);
-    if (result.success && result.data)  {
+    if (result.success && result.data.rtcToken)  {
       this.setState({
-        token: result.data,
+        token: result.data.rtcToken,
       }, this.startCall);
     }
   }
