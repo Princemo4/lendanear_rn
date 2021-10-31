@@ -13,12 +13,12 @@ export default class SelectModeScreen extends Component {
     this.state = {
     };
   }
-  
+
   render() {
     return (
       <View style={AppStyles.styleSet.flex1}>
         <KeyboardAvoidingView style={[
-          AppStyles.styleSet.screenContainer, 
+          AppStyles.styleSet.screenContainer,
         ]}>
           <View style={styles.headerContainer}>
             <View style={styles.v2Column}>
@@ -62,7 +62,7 @@ export default class SelectModeScreen extends Component {
   }
 
   onListenSomeone = () => {
-    this.props.navigation.navigate('SelectMode', {
+    this.props.navigation.navigate('Session', {
       user: this.userData,
       mode: 'listen'
     });

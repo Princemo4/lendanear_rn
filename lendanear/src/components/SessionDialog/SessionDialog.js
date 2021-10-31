@@ -38,6 +38,9 @@ export default function SessionDialog(props) {
           <Text style={styles.voiceSessionTime}>
             {strTime}
           </Text>
+          <Text style={styles.voiceSessionTime}>
+            {props.channel}
+          </Text>
           <View style={styles.userList}>
             <View style={styles.listHeader}>
               <Text style={styles.listHeaderText}>
@@ -50,7 +53,7 @@ export default function SessionDialog(props) {
           </View>
           <View style={[AppStyles.styleSet.fullWidth, AppStyles.styleSet.alignItemCenter]}>
             <View style={styles.buttonContainer}>
-              <TouchableOpacity 
+              <TouchableOpacity
                 style={styles.sessionButton}
                 onPress={()=> props.onPressMute?.()}
               >
@@ -60,7 +63,7 @@ export default function SessionDialog(props) {
                 />
                 <Text style={styles.leaveSession}>{ IMLocalized('Mute') }</Text>
               </TouchableOpacity>
-              <TouchableOpacity 
+              <TouchableOpacity
                 style={styles.sessionButton}
                 onPress={()=> props.onPressLeave?.()}
               >

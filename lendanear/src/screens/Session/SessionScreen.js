@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { 
-  View, 
-  Text, 
-  Image, 
+import {
+  View,
+  Text,
+  Image,
   KeyboardAvoidingView,
   PermissionsAndroid,
   Platform,
+  Alert
 } from 'react-native';
-import { 
+import {
   JoinLoader,
   SessionDialog
 } from '../../components'
@@ -26,18 +27,17 @@ export default class SessionScreen extends Component {
 
     const userData = props.navigation.getParam('user');
     const mode = props.navigation.getParam('mode');
-    console.log('navigationParam = ', userData);
-    
+
     this.state = {
       permissionsGranted: Platform.OS === 'ios',
       peerIds: [],
-      uid: userData.agoraUid,
+      agoraUid: userData.agoraUid,
       isMute: false,
       token: null,
       // fromMo, token: '006b0128a40c78c4a608d6f52d4645c9133IAANZU76zcM+PHaxyD5gYLWpK5v1QqPnFLrSoF/sOY57RaHYMoVCsDk/IgCfEH5VrdNuYQQAAQA9kG1hAgA9kG1hAwA9kG1hBAA9kG1h',
       //tempToken, token: '006b0128a40c78c4a608d6f52d4645c9133IAACAPEsoSIEoIDRkz/6rIrpU4qYdKJ6OtLt3epxWOfb5aHYMoUAAAAAEAAPz4g6UM5uYQEAAQBQzm5h',//null,
-      channelName: userData._id,
-      // channelName: 'TestChannel',
+      // channelName: userData._id,
+      channelName: 'TestChannel',
       users: [userData],
       timer: 0,
     };
@@ -54,6 +54,14 @@ export default class SessionScreen extends Component {
     this.stopTimeCount();
   }
 
+   createAlert = (msg) => {
+    Alert.alert(
+      "here is a message",
+      msg,
+      [{text: "OK"}]
+    )
+  }
+
   askPermission = async () => {
     if (Platform.OS === 'android') {
       PermissionsAndroid.requestMultiple(
@@ -63,7 +71,7 @@ export default class SessionScreen extends Component {
         ]
       ).then(result => {
         if (
-            result['android.permission.WRITE_EXTERNAL_STORAGE'] === 'granted' && 
+            result['android.permission.WRITE_EXTERNAL_STORAGE'] === 'granted' &&
             result['android.permission.RECORD_AUDIO'] === 'granted') {
                 this.setState({ permissionsGranted: true })
                 this.startCall()
@@ -87,35 +95,40 @@ export default class SessionScreen extends Component {
       console.log('Error', err);
     });
 
-    this._engine.addListener('UserJoined', (uid, elapsed) => {
-      console.log('UserJoined', uid, elapsed);
+    this._engine.addListener('UserJoined', (agoraUid, elapsed) => {
+      console.log('UserJoined', agoraUid, elapsed);
       // Get current peer IDs
       const { peerIds } = this.state;
       // If new user
-      if (uid != this.state.uid) {
-        if (peerIds.indexOf(uid) === -1) {
+      if (agoraUid != this.state.agoraUid) {
+        if (peerIds.indexOf(agoraUid) === -1) {
           this.setState({
             // Add peer ID to state array
-            peerIds: [...peerIds, uid],
+            peerIds: [...peerIds, agoraUid],
           });
-  
-          this.appendPeerDetails(uid);
+
+          this.appendPeerDetails(agoraUid);
         }
       }
     });
 
-    this._engine.addListener('UserOffline', (uid, reason) => {
-      console.log('UserOffline', uid, reason);
+    this._engine.addListener('UserOffline', (agoraUid, reason) => {
+      console.log('UserOffline', agoraUid, reason);
       const { peerIds } = this.state;
       this.setState({
         // Remove peer ID from state array
-        peerIds: peerIds.filter((id) => id !== uid),
+        peerIds: peerIds.filter((id) => id !== agoraUid),
       });
     });
 
     // If Local user joins RTC channel
-    this._engine.addListener('JoinChannelSuccess', (channel, uid, elapsed) => {
-      console.log('JoinChannelSuccess', channel, uid, elapsed);
+    this._engine.addListener('JoinChannelSuccess', (channel, agoraUid, elapsed) => {
+      let msg = ['JoinChannelSuccess', channel, agoraUid, elapsed];
+      this.state.channelDetails = {
+        channel: channel,
+        agoraUid: agoraUid
+      }
+      this.createAlert(msg.toString())
       // Set state variable to true
       this.setState({
         joinSucceed: true,
@@ -145,10 +158,10 @@ export default class SessionScreen extends Component {
 
   /**
    * @name getTokenAndUid
-   * @description Function to get agora token and uid for given channel name
+   * @description Function to get agora token and agoraUid for given channel name
    */
   getAgoraToken = async() => {
-    let result = await GetAgoraToken(this.state.channelName);
+    let result = await GetAgoraToken(this.state.channelName, this.state.agoraUid);
     console.log('getAgoraToken result = ', result);
     if (result.success && result.data.rtcToken)  {
       this.setState({
@@ -162,12 +175,12 @@ export default class SessionScreen extends Component {
    * @description Function to start the call
    */
   startCall = async () => {
-    console.log('Join Channel With ', this.state.token, this.state.channelName, this.state.uid);
+    console.log('Join Channel With ', this.state.token, this.state.channelName, this.state.agoraUid);
     await this._engine?.joinChannel(
       this.state.token,
       this.state.channelName,
       null,
-      this.state.uid
+      this.state.agoraUid
     );
   };
 
@@ -194,7 +207,7 @@ export default class SessionScreen extends Component {
   }
 
   goBack = () => {
-    this.props.navigation.navigate('Login')
+    this.props.navigation.navigate('SelectMode')
   }
 
   render() {
@@ -206,7 +219,7 @@ export default class SessionScreen extends Component {
             source={AppStyles.imageSet.bkgMainGradient}/>
         </View>
         <KeyboardAvoidingView style={[
-          AppStyles.styleSet.screenContainer, 
+          AppStyles.styleSet.screenContainer,
         ]}>
           <View style={styles.headerContainer}>
             <View style={styles.v2Column}>
@@ -224,6 +237,7 @@ export default class SessionScreen extends Component {
                 <SessionDialog
                   data={this.state.users}
                   seconds={this.state.timer}
+                  channel={this.state.channelDetails.channel}
                   onPressMute={()=> this.onPressSessionMute()}
                   onPressLeave={()=> this.onPressSessionLeave()}/>
               )}

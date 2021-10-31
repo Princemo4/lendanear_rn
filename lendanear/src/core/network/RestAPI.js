@@ -93,15 +93,16 @@ async function postRequest(url, param = {}, header = { headers: getHttpHeader('a
   }
 }
 
-export async function GetAgoraToken(channelName) {
+export async function GetAgoraToken(channelName,agoraUid) {
   const param = JSON.stringify({
     channel: channelName,
+    agoraUid: agoraUid
   });
 
   return await postRequest(Constants.Configs.Heroku_URL + '/rtctoken', param);
 }
 
-export async function GetUserFromAgoraId(agoraUid) {
+export async function GetUserFromAgoraUid(agoraUid) {
   return await getRequest(Constants.Configs.Heroku_URL + '/users/agoraUid/' + agoraUid);
 }
 

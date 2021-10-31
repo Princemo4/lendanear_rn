@@ -1,0 +1,4 @@
+#Sat Oct 09 01:00:31 EDT 2021
+base.0=/Users/mnasr/coding/lendanear_rn/lendanear/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

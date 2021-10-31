@@ -6,7 +6,7 @@ import { showAlertDialog } from '../../core/helpers/statics';
 import Constants from '../../Constants';
 import AppStyles from '../../AppStyles';
 import styles from './Styles';
-import { GetUserFromAgoraId } from '../../core/network/RestAPI';
+import { GetUserFromAgoraUid } from '../../core/network/RestAPI';
 
 export default class LoginScreen extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class LoginScreen extends Component {
     console.log('getUserDetails ', agoraUid)
     this.setState({loading: true});
     
-    let result = await GetUserFromAgoraId(agoraUid);    
+    let result = await GetUserFromAgoraUid(agoraUid);    
     if (result.success) {
       this.userData = result.data;
     }
@@ -161,12 +161,12 @@ export default class LoginScreen extends Component {
     //   return;
     // }
 
-    let agoraId = (this.state.email === '1') ? 6 : 17;
+    let agoraUid = (this.state.email === '1') ? 83 : 93;
     if (this.state.email === '1') {
-      this.getUserDetails(agoraId);
+      this.getUserDetails(agoraUid);
     } else {
-      this.getUserDetails(agoraId);
+      this.getUserDetails(agoraUid);
     }
     
   }
-}
+} 
