@@ -1,0 +1,341 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+MERGED from [androidx.multidex:multidex:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/488c2f9bb5f6085091524dd8c364a1c9/AndroidManifest.xml:17:1-22:12
+MERGED from [:react-native-community_async-storage] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-25:12
+MERGED from [:react-native-device-info] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-localize] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-localize/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.5] /private/var/root/.gradle/caches/transforms-2/files-2.1/0d37edcebeea7f6fff0a2d1d88bfb37a/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r245459] /private/var/root/.gradle/caches/transforms-2/files-2.1/51f86a89d734cce48d5fb67329c15759/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/d04a800ab041495dc3709a426c9f5cb0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18ef2b761215f25d9ad91a9ce7451b40/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/27d0d0f69f4df831c9d6172948885043/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04c265f4bfd3cd1c751a5a5931e7c704/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/21bfca2ff21bf5e1a618461552a101c2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d8f4054b5697ad32eb12475c4e475821/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d0cf74bed4cf7dcef0abfd317cbdf792/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18551acc4add4bc23f2ff73605b36ee9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f37032a7a701e3f45655ad594ae1407c/AndroidManifest.xml:2:1-13:12
+MERGED from [io.agora.rtc:full-sdk:3.1.3] /private/var/root/.gradle/caches/transforms-2/files-2.1/2aa6612a8a0a1a658c1cee2534c06f7d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f3dc2ad8ddfc9f474dc543db26b1c5d7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/99a4660e3713d043c94e76c18f838bdd/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c3ed4513fd8502dd2b774c8a5a0f7838/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/563688974e8f674a9b276b440ab8e08d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7b52c4c2b12ad49113c6d43e7ee459e4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/1f8444be5b9fb73a828e20e29ccc04b5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/c69ac8fdeac6c48beb69c4a1e26797a6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/b62515017df198da7b54bfedba688533/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/2bde524c24bc067258baa6b9b534e444/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/87d888990b9127a7726b749c515c5b1f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/15d169d0df8520625041af4521f77ee4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e75912f95d35a3198c44f982cb8f9008/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/59e859d9d26e6defd706a66cdb4abff8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/284e96b953e6e89f9939603f4ec073f0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04206e2e6ce5239b31c9181f53221837/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/a61c799b09165c058d2b52c7aee6c9ec/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/cdc503dc9c82e32cb146c18097ba1e7c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/85aa2526304d7fffde371b3f8f386f3f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/80ffa37ebfee01b31453fe9ad994df54/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7e4032682810888839b226ca1358270b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/789454c7872ab65f4c6975097ab65480/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f02a1871cc9e7bfb3944b0c73b8278e1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c2b617b6d93f96d97e39a396f22eea1b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/82717e5e784f0c0155bef0e86242be5f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e0d7f366d0274221623a9c4ee75be00f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/018eafbd4912669050cbfcafd296b198/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c1a0726e1619ee0e9a47d1cfe4986852/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:2:3-26
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:2:3-26
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:1-27:12
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-67
+MERGED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from [com.facebook.react:react-native:0.61.5] /private/var/root/.gradle/caches/transforms-2/files-2.1/0d37edcebeea7f6fff0a2d1d88bfb37a/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] /private/var/root/.gradle/caches/transforms-2/files-2.1/0d37edcebeea7f6fff0a2d1d88bfb37a/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f37032a7a701e3f45655ad594ae1407c/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f37032a7a701e3f45655ad594ae1407c/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f3dc2ad8ddfc9f474dc543db26b1c5d7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f3dc2ad8ddfc9f474dc543db26b1c5d7/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/99a4660e3713d043c94e76c18f838bdd/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/99a4660e3713d043c94e76c18f838bdd/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/a61c799b09165c058d2b52c7aee6c9ec/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/a61c799b09165c058d2b52c7aee6c9ec/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:8:7-39
+	tools:ignore
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:7:75-114
+	android:roundIcon
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:10:7-52
+	tools:targetApi
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:7:54-74
+	android:icon
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:13:7-38
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:13:7-38
+	android:usesCleartextTraffic
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:12:7-42
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.lendanear.MainActivity
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:14:7-23:18
+	android:label
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:16:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:18:9-51
+	android:configChanges
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:17:9-79
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:15:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:19:9-22:25
+action#android.intent.action.MAIN
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:20:13-65
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:20:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:21:13-73
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:21:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:24:7-84
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml:24:17-81
+uses-sdk
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.multidex:multidex:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/488c2f9bb5f6085091524dd8c364a1c9/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/488c2f9bb5f6085091524dd8c364a1c9/AndroidManifest.xml:20:5-43
+MERGED from [:react-native-community_async-storage] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:react-native-device-info] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-device-info] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-localize] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-localize/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-localize] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-localize/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /private/var/root/.gradle/caches/transforms-2/files-2.1/0d37edcebeea7f6fff0a2d1d88bfb37a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /private/var/root/.gradle/caches/transforms-2/files-2.1/0d37edcebeea7f6fff0a2d1d88bfb37a/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /private/var/root/.gradle/caches/transforms-2/files-2.1/51f86a89d734cce48d5fb67329c15759/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /private/var/root/.gradle/caches/transforms-2/files-2.1/51f86a89d734cce48d5fb67329c15759/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/d04a800ab041495dc3709a426c9f5cb0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/d04a800ab041495dc3709a426c9f5cb0/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18ef2b761215f25d9ad91a9ce7451b40/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18ef2b761215f25d9ad91a9ce7451b40/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/27d0d0f69f4df831c9d6172948885043/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/27d0d0f69f4df831c9d6172948885043/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04c265f4bfd3cd1c751a5a5931e7c704/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04c265f4bfd3cd1c751a5a5931e7c704/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/21bfca2ff21bf5e1a618461552a101c2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/21bfca2ff21bf5e1a618461552a101c2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d8f4054b5697ad32eb12475c4e475821/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d8f4054b5697ad32eb12475c4e475821/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d0cf74bed4cf7dcef0abfd317cbdf792/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/d0cf74bed4cf7dcef0abfd317cbdf792/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18551acc4add4bc23f2ff73605b36ee9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/18551acc4add4bc23f2ff73605b36ee9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f37032a7a701e3f45655ad594ae1407c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f37032a7a701e3f45655ad594ae1407c/AndroidManifest.xml:7:5-9:41
+MERGED from [io.agora.rtc:full-sdk:3.1.3] /private/var/root/.gradle/caches/transforms-2/files-2.1/2aa6612a8a0a1a658c1cee2534c06f7d/AndroidManifest.xml:7:5-9:41
+MERGED from [io.agora.rtc:full-sdk:3.1.3] /private/var/root/.gradle/caches/transforms-2/files-2.1/2aa6612a8a0a1a658c1cee2534c06f7d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f3dc2ad8ddfc9f474dc543db26b1c5d7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f3dc2ad8ddfc9f474dc543db26b1c5d7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/99a4660e3713d043c94e76c18f838bdd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/99a4660e3713d043c94e76c18f838bdd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c3ed4513fd8502dd2b774c8a5a0f7838/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c3ed4513fd8502dd2b774c8a5a0f7838/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/563688974e8f674a9b276b440ab8e08d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/563688974e8f674a9b276b440ab8e08d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7b52c4c2b12ad49113c6d43e7ee459e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7b52c4c2b12ad49113c6d43e7ee459e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/1f8444be5b9fb73a828e20e29ccc04b5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/1f8444be5b9fb73a828e20e29ccc04b5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/c69ac8fdeac6c48beb69c4a1e26797a6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/c69ac8fdeac6c48beb69c4a1e26797a6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/b62515017df198da7b54bfedba688533/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/b62515017df198da7b54bfedba688533/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/2bde524c24bc067258baa6b9b534e444/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/2bde524c24bc067258baa6b9b534e444/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/87d888990b9127a7726b749c515c5b1f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/87d888990b9127a7726b749c515c5b1f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/15d169d0df8520625041af4521f77ee4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/15d169d0df8520625041af4521f77ee4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e75912f95d35a3198c44f982cb8f9008/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e75912f95d35a3198c44f982cb8f9008/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/59e859d9d26e6defd706a66cdb4abff8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/59e859d9d26e6defd706a66cdb4abff8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/284e96b953e6e89f9939603f4ec073f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/284e96b953e6e89f9939603f4ec073f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04206e2e6ce5239b31c9181f53221837/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/04206e2e6ce5239b31c9181f53221837/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /private/var/root/.gradle/caches/transforms-2/files-2.1/f867bb63a5fec1d8cb252e928e107522/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/a61c799b09165c058d2b52c7aee6c9ec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/a61c799b09165c058d2b52c7aee6c9ec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/cdc503dc9c82e32cb146c18097ba1e7c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/cdc503dc9c82e32cb146c18097ba1e7c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/85aa2526304d7fffde371b3f8f386f3f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/85aa2526304d7fffde371b3f8f386f3f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/80ffa37ebfee01b31453fe9ad994df54/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/80ffa37ebfee01b31453fe9ad994df54/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7e4032682810888839b226ca1358270b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/7e4032682810888839b226ca1358270b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/789454c7872ab65f4c6975097ab65480/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/789454c7872ab65f4c6975097ab65480/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f02a1871cc9e7bfb3944b0c73b8278e1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/f02a1871cc9e7bfb3944b0c73b8278e1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c2b617b6d93f96d97e39a396f22eea1b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c2b617b6d93f96d97e39a396f22eea1b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/82717e5e784f0c0155bef0e86242be5f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/82717e5e784f0c0155bef0e86242be5f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e0d7f366d0274221623a9c4ee75be00f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e0d7f366d0274221623a9c4ee75be00f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/018eafbd4912669050cbfcafd296b198/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/018eafbd4912669050cbfcafd296b198/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c1a0726e1619ee0e9a47d1cfe4986852/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/c1a0726e1619ee0e9a47d1cfe4986852/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /Users/mnasr/coding/lendanear_rn/lendanear/android/app/src/debug/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-72
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-71
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:22-68
+uses-permission#android.permission.CAMERA
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-65
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-62
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:22-77
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:5-68
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:22-65
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:5-76
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:5-80
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:22-77
+uses-permission#android.permission.READ_PRIVILEGED_PHONE_STATE
+ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:5-23:47
+	tools:ignore
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:9-44
+	android:name
+		ADDED from [:react-native-agora] /Users/mnasr/coding/lendanear_rn/lendanear/node_modules/react-native-agora/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-70
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:1.1.2] /private/var/root/.gradle/caches/transforms-2/files-2.1/f662bfacba82827e2c66958e8fa737ca/AndroidManifest.xml:9:22-107
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-iid:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/9c4fdae61f0dd4e6dc8a199a00bdcd80/AndroidManifest.xml:23:22-79
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/e92b7cd5eaa360ca4a59d6bbacd76c78/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /private/var/root/.gradle/caches/transforms-2/files-2.1/bdce9070bc86e59dbd269aee94f4274d/AndroidManifest.xml:24:13-58
